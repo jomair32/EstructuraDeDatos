@@ -57,7 +57,7 @@ public abstract class Planta extends Empleado {
 	public double sueldo() { 
 		/*
 		 * TODO:
-		 * Calcula el sueldo de un empleado de Planta de la siguiente manera:
+		 * Calcula el sueldo  de un empleado de Planta de la siguiente manera:
 		 *    El sueldo inicial es el pagoSemanal.
 		 * A ese sueldo se le agregan las prestaciones de la siguiente forma:
 		 *    Si el arreglo de instancia de prestaciones tiene un valor de true en la posici�n i, donde i es:

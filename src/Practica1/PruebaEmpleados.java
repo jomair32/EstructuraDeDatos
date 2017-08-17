@@ -30,8 +30,18 @@ public class PruebaEmpleados {
 		 * TODO:
 		 * Regresa una cadena con las actividades particulares del objeto de Planta que se recibe de par�metro
 		 */
-		return "";
-	}
+            
+            if(a!=null){
+            if(a instanceof Secretaria){
+            Secretaria g=(Secretaria)a;
+            return g.llenaRegistros();
+        }
+            if(a instanceof Directivo){
+            Directivo g=(Directivo)a;
+            return g.administrar()+" "+g.definirAumentos()+" "+g.reportarLogros();
+        }
+		
+	}return "";}
 	
 	
 	
@@ -40,6 +50,10 @@ public class PruebaEmpleados {
 		 * TODO:
 		 * Regresa una cadena con las actividades que realiza el objeto con un rol de Administrativo que se recibe de par�metro
 		 */
+            if(d instanceof Directivo){
+            Directivo g=(Directivo)d;
+            return g.administrar()+" "+g.definirAumentos()+" "+g.reportarLogros();
+        }
 		return "";
 	}
 }
