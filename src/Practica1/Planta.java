@@ -44,8 +44,13 @@ public abstract class Planta extends Empleado {
     	 * el arreglo est�tico PRESTACIONES, en la misma posici�n i. As�, si prestaciones[0] = true, entonces la prestaci�n
     	 * correspondiente es PRESTACIONES[0] (que es �Vales despensa�).
     	 */
-    	
-    	return "";
+        String a="";
+        
+    	for(int i=0; i<this.prestaciones.length;i++){
+            if(this.prestaciones[i]==true){
+                a=a+Planta.PRESTACIONES[i]+", ";
+            }}
+    	return a;
 	}
 	
 	
@@ -60,8 +65,17 @@ public abstract class Planta extends Empleado {
 		 *       1, 2, 5: sumarle al sueldo el PAGO_PRESTACIONES de la misma posici�n i multiplicado por el pagoSemanal
 		 *       3, 4: sumarle al sueldo el PAGO_PRESTACIONES de la misma posici�n i multiplicado por diaVacaciones
 		 */
-		
-		return 0.0;
+		double Sueldo=this.pagoSemanal;
+                for(int i=0; i<this.prestaciones.length;i++){
+                    if(this.prestaciones[i]==true){
+                        if(i==0 || i==6 || i==7){
+                    Sueldo=Sueldo+Planta.PAGO_PRESTACIONES[i];}
+                        if(i==1 || i==2 || i==5){
+                    Sueldo=Sueldo+(Planta.PAGO_PRESTACIONES[i]*this.pagoSemanal);}
+                        if(i==3|| i==4){
+                    Sueldo=Sueldo+(Planta.PAGO_PRESTACIONES[i]*this.diaVacaciones);}
+            }}
+		return Sueldo;
 	}
 	
     public void setPagoSemanal( double pagoSemanal ) { 
@@ -84,4 +98,6 @@ public abstract class Planta extends Empleado {
 	 * El m�todo no regresa nada.
 	 * El m�todo recibe una cadena de caracteres con el nombre del puesto (nombrePuesto).
 	 */
+        public abstract void setNombrePuesto(String nombre);
+        
 }
