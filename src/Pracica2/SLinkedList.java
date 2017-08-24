@@ -56,6 +56,7 @@ public class SLinkedList<E> implements List<E> {
                     this.size++;
                     }
             }
+            //System.out.println("salio");
             else{
                 
                 throw new IndexOutOfBoundsException();
