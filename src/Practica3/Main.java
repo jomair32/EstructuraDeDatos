@@ -21,7 +21,27 @@ public class Main {
             }
             return true;
         }
-        public static void main(String[] args) {
+        public static void main(String[] args){
+                LinkedList<String> iList=new LinkedList<String>();
+                iList.addFirst("Juan");
+                iList.addFirst("Pablo");
+                iList.addFirst("jesus");
+                iList.addFirst("Jose");
+                iList.addFirst("carlos");
+                iList.addFirst("pedro");
+                System.out.println(iList);
+                iList.josephus(3);
+                System.out.println("");
+                LinkedList<Integer> iList2 = new LinkedList<Integer>();
+                for(int i=0;i<103;i++){
+                    iList2.addLast(i);
+                }
+                System.out.println(iList2);
+                iList2.josephus(4);
+                
+        
+        } 
+        public static void maind(String[] args) {
             System.out.println(isPalindrome("perro"));
             System.out.println(isPalindrome("ana"));
             System.out.println(isPalindrome("a na"));
