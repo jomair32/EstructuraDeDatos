@@ -287,12 +287,12 @@ public class LinkedList<E> implements List<E> {
             int current=pasos-1;
             
             int count=0;
-            int count2=count;
+            
             while(size!=1){
                 
                 if((pasos+count)<=size){
                     count=count+(pasos-1);
-                    count2+=pasos;
+                    
                     Node<E> currentNode=node(count);
                     System.out.println(currentNode.value+ " fue eliminado, "+(size-1)+" nodo(s) restante(s)");
                     //System.out.println("El nodo "+(count2)+" fue eliminado, "+(size-1)+" nodo(s) restante(s) "+count+"   "+count2);
@@ -310,7 +310,7 @@ public class LinkedList<E> implements List<E> {
                         System.out.println(currentNode.value+ " fue eliminado, "+(size-1)+" nodo(s) restante(s)");
                         //System.out.println("El nodo "+(count2)+" fue eliminado, "+(size-1)+" nodo(s) restante(s) "+count);
                         remove(count);
-                        count2++;
+                        
                         //System.out.println(toString()+"");
                     }
                    
