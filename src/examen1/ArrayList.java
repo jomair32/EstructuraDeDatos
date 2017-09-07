@@ -55,8 +55,7 @@ public class ArrayList<E> implements List<E> {
             }
             Object[] newArray=new Object[top.length+1];
             for(int i=0;i<size();i++){
-                
-                top[i]=newArray[i];
+                newArray[i]=top[i];
                 
             }
             top=newArray;
