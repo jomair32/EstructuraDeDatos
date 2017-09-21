@@ -57,8 +57,10 @@ public class ArrayList<E> implements List<E> {
             for(int i=0;i<size();i++){
                 newArray[i]=top[i];
                 
+                
             }
             top=newArray;
+            
             
             
             for(int i=size();i>index;i--){
@@ -90,13 +92,14 @@ public class ArrayList<E> implements List<E> {
                 size++;
             }
             else{
-            Object[] newArray=new Object[top.length+1];
-            newArray[top.length]=e;
-            for(int i=0;i<top.length;i++){
-                top[i]=newArray[i];
+            Object[] newArray=new Object[size()+1];
+            newArray[size()]=e;
+            for(int i=0;i<size();i++){
+                newArray[i]=top[i];
+                top=newArray;
+                size++;}
             }
-            top=newArray;
-            size++;}
+            
 	}
 
 	@Override
@@ -120,7 +123,7 @@ public class ArrayList<E> implements List<E> {
 	
 	@Override
 	public E getLast() {
-		return (E) top[top.length-1];
+		return (E) top[size()-1];
 	}
 
 	
@@ -166,8 +169,9 @@ public class ArrayList<E> implements List<E> {
                     ;
                 }
                 else{
-                    for(int i=0;i<top.length;i++)
-                        s+=top[i]+" ,";
+                    s+=top[0];
+                    for(int i=1;i<size();i++)
+                        s+=" ,"+top[i];
                     s+="]";
                 }
                 return s;

@@ -30,7 +30,7 @@ public class Main {
                 iList.addFirst("carlos");
                 iList.addFirst("pedro");
                 System.out.println(iList);
-                iList.josephus(3);
+                iList.josephus(4);
                 System.out.println("");
                 LinkedList<Integer> iList2 = new LinkedList<Integer>();
                 for(int i=0;i<103;i++){
