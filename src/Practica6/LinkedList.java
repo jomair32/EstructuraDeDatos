@@ -306,18 +306,33 @@ public class LinkedList<E> implements List<E> {
         return getFirst();
     }
 
-    public int linearSearch(int[] e, int obj) {
+    public static int linearSearch(int[] e, int o) {
         for (int i = 0; i < e.length; i++) {
-            if (e[i] == obj) {
+            if (e[i] == o) {
                 return i;
             } else {
-                if (e[i] > obj) {
+                if (e[i] > o) {
                     return (-1);
                 }
             }
         }
         return (-1);
 
+    }
+
+    public static int binarySearch(int[] e, int o) {
+        int min = 0, max = e.length - 1, mid;
+        while (min >= max) {
+            mid = (max - min) / 2;
+            if (o < e[mid]) {
+                max = mid - 1;
+            } else if (o > e[mid]) {
+                min = mid + 1;
+            } else {
+                return mid;
+            }
+        }
+        return -1;
     }
 
 }
