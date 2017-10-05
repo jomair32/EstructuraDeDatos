@@ -335,4 +335,40 @@ public class LinkedList<E> implements List<E> {
         return -1;
     }
 
+    public static void shiftRight(int values[], int start, int end) {
+
+        int a = values[start], b = end;
+
+        for (int i = start; i != end; i--) {
+            values[i] = values[i - 1];
+        }
+        values[b] = a;
+
+    }
+
+    public static void Insertionsort(int[] e) {
+        for (int i = 1; i < e.length; i++) {
+            for (int j = 0; j != i; j++) {
+                if (e[i] < e[j]) {
+                    shiftRight(e, i, j);
+                }
+            }
+        }
+
+    }
+
+    public static void Selectionsort(int[] e) {
+        for (int i = 0; i < e.length; i++) {
+            int min = i;
+            for (int j = (i + 1); j < e.length; j++) {
+                if (e[min] > e[j]) {
+                    min = j;
+                }
+
+            }
+            int a = e[min];
+            e[min] = e[i];
+            e[i] = a;
+        }
+    }
 }
