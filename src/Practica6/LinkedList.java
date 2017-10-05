@@ -305,7 +305,18 @@ public class LinkedList<E> implements List<E> {
 
         return getFirst();
     }
-
+    //Busquedas
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public static int linearSearch(int[] e, int o) {
         for (int i = 0; i < e.length; i++) {
             if (e[i] == o) {
