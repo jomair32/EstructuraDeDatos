@@ -382,4 +382,13 @@ public class LinkedList<E> implements List<E> {
             e[i] = a;
         }
     }
+    
+    
+    public static void Heapsort(int[] e){
+        for(int i=0; i<e.length-1;i--){
+            int a = e[0];
+            e[0] = e[i];
+            e[i] = a;
+        }
+    }
 }
