@@ -3,13 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Stack;
+package nuevoo;
 
-/**
- *
- * @author Jomair
- * @param <E>
- */
 public interface IStack<E> {
 	
 	/**

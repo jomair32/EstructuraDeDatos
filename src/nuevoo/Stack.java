@@ -3,12 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Stack;
+package nuevoo;
 
-/**
- *
- * @author Jomair
- */
 import java.util.EmptyStackException;
 
 public class Stack<E> implements IStack<E> {
@@ -45,9 +41,7 @@ public class Stack<E> implements IStack<E> {
 	public boolean empty() {
 		return stack.isEmpty();
 	}
-        
-        
-        
+
 	@Override
 	public Object[] toArray() {
 		return stack.toArray();

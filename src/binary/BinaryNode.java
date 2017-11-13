@@ -97,12 +97,55 @@ public class BinaryNode {
         System.out.println(a.value);
         if (a.leftChild != null) {
             preorder(a.leftChild);
-        } 
+        }
 
         if (a.rightChild != null) {
             preorder(a.rightChild);
-        
+
         }
 
     }
+
+    public void addNode(int value) {
+        if (this.value > value) {
+            if (this.leftChild == null) {
+                this.leftChild = new BinaryNode(value);
+            } else {
+                this.leftChild.addNode(value);
+            }
+
+        } else {
+            if(value>this.value){
+            if (this.rightChild == null) {
+                this.rightChild = new BinaryNode(value);
+            } else {
+                this.rightChild.addNode(value);
+            }}
+
+        }
+    }
+    
+    public BinaryNode findNode(int target){
+        if(target==this.value){
+            return this;
+        }
+        if(target<this.value){
+            if(this.leftChild==null){
+                return null;
+            }
+            else{
+                return this.leftChild.findNode(target);
+            }
+        }
+        else{
+            
+            if(this.rightChild==null){
+                return null;
+            }
+            else{
+                return this.rightChild.findNode(target);
+            }
+        }
+    }
+
 }

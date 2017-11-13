@@ -1,5 +1,14 @@
-package Practica6;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package nuevoo;
 
+/**
+ *
+ * @author jomai
+ */
 import java.util.NoSuchElementException;
 
 public class LinkedList<E> implements List<E> {
